@@ -1,0 +1,36 @@
+[
+    {
+        "date":"Oct 16, 2023",
+        "title":"Pagination with Paging 3: Modifying Paged Data",
+        "description":"Pagination plays a crucial role in building industrial applications. We don’t want to load large amounts of data in one go, that’s why we read them in certain pages. Through this, we want to provide infinite scrolling behaviour to our users without hampering their user experience. For Android, Google has…",
+        "tags": [
+            "AndroidDev","Android","jetpack","optimisation","Viewmodel"
+        ],
+        "image":"https://miro.medium.com/v2/resize:fit:4800/format:webp/1*d6X8cdvfrF1OXyp3Pjx4nw.png",
+        "link":"https://medium.com/proandroiddev/pagination-with-paging-3-modifying-paged-data-223f0bea603b"
+    },
+    {
+        "date":"Jun 13, 2023",
+        "title":"Server-Sent Events in Android (with Node.js)",
+        "description":"In today’s application development communication between clients and servers is a very crucial aspect. Whether we need a live stream of data, push notifications, data syncing with the backend, etc. We need",
+        "tags": [
+            "AndroidDev","Android","jetpack","optimisation","Viewmodel"
+        ],
+        "image":"https://miro.medium.com/v2/resize:fit:4800/format:webp/1*v_pPlwBjYldIFpd561hiXA.png",
+        "link":"https://proandroiddev.com/server-sent-events-in-android-with-node-js-8e7daec45bbd"
+    },
+    {
+        "date":"Feb 12, 2023",
+        "title":"Refresh JWT Tokens in Android with OkHttp Interceptor",
+        "description":"In this article, we will be discussing the process of refreshing JSON Web Tokens (JWTs) in an Android app using Retrofit. JWTs are widely used for authentication in web and mobile applications. ",
+        "image":"https://miro.medium.com/v2/resize:fit:4800/format:webp/1*3C2hKy-PI9M8pth4VEWwbQ.png",
+        "link":"https://medium.com/proandroiddev/refresh-jwt-tokens-in-android-with-okhttp-interceptor-575aaa4b6"
+    },
+    {
+        "date":"Feb 12, 2023",
+        "title":"Read more on Medium",
+        "description":"",
+        "image":"https://play-lh.googleusercontent.com/CyCfSIDF_vVtSiyHi1H47HZtfE2e_-4UVGtoT8zX9ym8GIRcTOhBknPIvadrQUMp2Q",
+        "link":"https://medium.com/@rahul9650ray"
+    }
+]
