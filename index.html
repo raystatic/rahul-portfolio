@@ -19,9 +19,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Rahul Ray">
     <meta property="og:description" content="Android Dev - Lenskart.com | Author">
-    <!-- <meta property="og:url" content="https://www.rivu.dev/"> -->
     <meta property="og:image" content="https://pbs.twimg.com/profile_images/1480902537381249025/l8_jdMVc_400x400.jpg">
-    <!-- <meta property="article:publisher" content="https://www.facebook.com/rivu.chakraborty.71"> -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rahul Ray">
     <meta name="twitter:description" content="Android Dev - Lenskart.com | Author">
@@ -153,6 +151,37 @@
             grid-gap: 20px;
         }
 
+        .post-thumbnail-image-mobile {
+            display: block;
+            width: 100%;
+            height: 45vh;
+            object-fit: contain;
+            background-color: black;
+        }
+
+        .post-thumbnail-image-desktop {
+            display: block;
+            width: 250px;
+            height: 150px;
+            object-fit: contain;
+            background-color: black;
+        }
+
+        .desktop-view{
+            display: block;
+            visibility: visible;
+        }
+
+        .mobile-view {
+            display: none;
+            visibility: hidden;
+        }
+
+        @media screen and (max-width:900px), screen and (max-height:500px) {
+            .desktop-view { display: none !important; }
+            .mobile-view   { display: block; visibility: visible; }
+        }
+
     </style>
     <script async src="https://js.stripe.com/v3/"></script>
     <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js"
@@ -194,38 +223,8 @@
             <header class="navbar outer">
                 <div class="navbar-inside">
                     <div class="navbar-branding">
-                        <h1 class="navbar-title"><a href="https://www.rivu.dev">Rahul Ray</a></h1>
+                        <h1 class="navbar-title"><a href="https://raystatic.github.io/">Rahul Ray</a></h1>
                     </div>
-                    <nav class="navbar-menu" aria-label="Primary Navigation">
-                        <ul class="menu">
-                            <!-- <li class="menu-item menu-item-home current-menu-item"><a href="https://www.rivu.dev/">Home</a></li>
-    <li class="menu-item menu-item-public-speaking"><a href="https://rivu.dev/public-speaking/">Public Speaking</a></li>
-    <li class="menu-item menu-item-books"><a href="https://www.rivu.dev/books/">Books</a></li>
-    <li class="menu-item menu-item-about"><a href="https://www.rivu.dev/about/">About</a></li>
-    <li class="menu-item menu-item-courses"><a href="https://courses.rivu.dev/">Courses</a></li> -->
-                        </ul>
-
-                        <ul class="actions">
-                            <!-- <li class="action-item action-subscribe">
-                        <a href="javascript:" data-portal="signup">Subscribe</a>
-                    </li>
-                    <li class="action-item">
-                        <a href="javascript:" data-portal="signin">Sign in</a>
-                    </li> -->
-                            <!-- <li class="action-item action-button">
-                    <button class="sidebar-toggle btn btn-icon"><span class="screen-reader-text">Menu</span><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 12c0-0.69-0.281-1.316-0.732-1.767s-1.077-0.732-1.767-0.732-1.316 0.281-1.767 0.732-0.732 1.077-0.732 1.767 0.281 1.316 0.732 1.767 1.077 0.732 1.767 0.732 1.316-0.281 1.767-0.732 0.732-1.077 0.732-1.767zM23.249 12c0-0.69-0.281-1.316-0.732-1.767s-1.077-0.732-1.767-0.732-1.316 0.281-1.767 0.732-0.732 1.077-0.732 1.767 0.281 1.316 0.732 1.767 1.077 0.732 1.767 0.732 1.316-0.281 1.767-0.732 0.732-1.077 0.732-1.767zM5.75 12c0-0.69-0.281-1.316-0.732-1.767s-1.077-0.732-1.767-0.732-1.316 0.281-1.767 0.732-0.732 1.077-0.732 1.767 0.281 1.316 0.732 1.767 1.077 0.732 1.767 0.732 1.316-0.281 1.767-0.732 0.732-1.077 0.732-1.767z"></path></svg></button>
-                </li> -->
-                            <!-- <li class="action-item action-button">
-                                <button class="search-toggle btn btn-icon" data-ghost-search><span
-                                        class="screen-reader-text">Search</span><svg xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M23.38,21.62l-6.53-6.53a9.15,9.15,0,0,0,1.9-5.59,9.27,9.27,0,1,0-3.66,7.36l6.53,6.53a1.26,1.26,0,0,0,1.76,0A1.25,1.25,0,0,0,23.38,21.62ZM2.75,9.5A6.75,6.75,0,1,1,9.5,16.25,6.76,6.76,0,0,1,2.75,9.5Z">
-                                        </path>
-                                    </svg></button>
-                            </li> -->
-                        </ul>
-                    </nav>
                 </div>
             </header>
             <section class="hero-container outer">
@@ -238,9 +237,6 @@
                     <p class="hero-text">Android Dev - Lenskart.com | Author</p>
                     <div class="hero-social">
                         <div class="social-links">
-                            <!-- <a href="https://www.facebook.com/rivu.chakraborty.71" class="btn btn-icon btn-secondary" target="_blank" rel="noopener">
-        <span class="screen-reader-text">Facebook</span>
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"/></svg>    </a> -->
                             <a href="https://twitter.com/raystatic_" class="btn btn-icon btn-secondary" target="_blank"
                                 rel="noopener">
                                 <span class="screen-reader-text">Twitter</span>
@@ -293,16 +289,22 @@
                 <div id="yotube_videos"></div>
             </div>
 
+            <div class="post-feed">
+                <div class="small-title" style="padding-left: 1.66667rem;">Open Source Projects</div>
+            </div>
+
+            <div class="post-feed outer">
+                <div id="projects"></div>
+            </div>
+
+            
         </main>
 
         <footer class="footer outer">
             <div class="footer-inside">
                 <div class="footer-social">
                     <div class="social-links">
-                        <!-- <a href="https://www.facebook.com/rivu.chakraborty.71" class="btn btn-icon btn-secondary" target="_blank" rel="noopener">
-    <span class="screen-reader-text">Facebook</span>
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"/></svg>    </a> -->
-                        <a href="https://twitter.com/raystatic_" class="btn btn-icon btn-secondary" target="_blank"
+                       <a href="https://twitter.com/raystatic_" class="btn btn-icon btn-secondary" target="_blank"
                             rel="noopener">
                             <span class="screen-reader-text">Twitter</span>
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -332,9 +334,6 @@
                             </svg> </a>
                     </div>
                 </div>
-                <!-- <p class="footer-copyright"><a href="https://www.rivu.dev">Rahul Ray</a> &copy; 2023. Horace theme by <a
-                        target="_blank" href="https://justgoodthemes.com/" rel="noopener">Just Good Themes</a>. Powered
-                    by <a target="_blank" href="https://ghost.org" rel="noopener">Ghost</a>.</p> -->
                 <p class="footer-back-to-top"><a class="btn btn-secondary btn-icon" href="#page"><svg
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -344,111 +343,6 @@
             </div>
         </footer>
     </div>
-    <div class="site-overlay"></div>
-
-    <aside class="sidebar">
-        <div class="sidebar-scrollable">
-            <div class="sidebar-inside">
-                <button id="sidebar-hide" class="sidebar-toggle btn btn-icon"><span class="screen-reader-text">Close
-                        Sidebar</span><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.419 4.439l7.561 7.561-7.561 7.561c-0.559 0.559-0.559 1.463 0 2.020s1.463 0.559 2.020 0l7.561-7.561 7.561 7.561c0.559 0.559 1.463 0.559 2.020 0s0.559-1.463 0-2.020l-7.561-7.561 7.561-7.561c0.559-0.559 0.559-1.463 0-2.020s-1.463-0.559-2.020 0l-7.561 7.561-7.561-7.561c-0.559-0.559-1.463-0.559-2.020 0s-0.559 1.463 0 2.020z">
-                        </path>
-                    </svg></button>
-                <nav id="sidebar-nav" class="widget widget-nav">
-                    <h2 class="widget-title small-title">Explore Site</h2>
-                    <ul class="menu">
-                        <!-- <li class="menu-item menu-item-home current-menu-item"><a href="https://www.rivu.dev/">Home</a></li> -->
-                        <!-- <li class="menu-item menu-item-public-speaking"><a href="https://rivu.dev/public-speaking/">Public Speaking</a></li> -->
-                        <!-- <li class="menu-item menu-item-books"><a href="https://www.rivu.dev/books/">Books</a></li>
-    <li class="menu-item menu-item-about"><a href="https://www.rivu.dev/about/">About</a></li>
-    <li class="menu-item menu-item-courses"><a href="https://courses.rivu.dev/">Courses</a></li> -->
-                    </ul>
-
-                    <ul class="actions">
-                        <!-- <li class="action-item action-button"><a class="btn" href="javascript:" data-portal="signup">Subscribe</a></li> -->
-                    </ul>
-                </nav>
-                <section class="widget widget-recent-posts">
-                    <h2 class="widget-title small-title">Recent Articles</h2>
-                    <ul>
-                        <li>
-                            <div class="post-header">
-                                <div class="post-meta">
-                                    <time class="published" datetime="2020-07-05">July 05, 2020</time>
-                                </div>
-                                <h3 class="post-title"><a
-                                        href="/why-emitting-state-from-repository-is-an-ani-pattern/">Why Emitting State
-                                        from Repository is an Anti-Pattern</a></h3>
-                            </div>
-                            <a href="/why-emitting-state-from-repository-is-an-ani-pattern/" class="post-thumbnail"><img
-                                    class="post-thumbnail-image"
-                                    src="https://s3-us-east-2.amazonaws.com/rivu.dev/2020/07/ViewStateAndViewModel.jpg"
-                                    alt="Why Emitting State from Repository is an Anti-Pattern" /></a>
-                        </li>
-                        <li>
-                            <div class="post-header">
-                                <div class="post-meta">
-                                    <time class="published" datetime="2020-06-13">June 13, 2020</time>
-                                </div>
-                                <h3 class="post-title"><a
-                                        href="/service-locator-and-dependency-injection-which-is-what/">Breaking the
-                                        ice: Service Locator and Dependency Injection Which is What</a></h3>
-                            </div>
-                            <a href="/service-locator-and-dependency-injection-which-is-what/"
-                                class="post-thumbnail"><img class="post-thumbnail-image"
-                                    src="https://s3-us-east-2.amazonaws.com/rivu.dev/2020/06/coffee-writing-computer-blogging-34600.jpg"
-                                    alt="Breaking the ice: Service Locator and Dependency Injection Which is What" /></a>
-                        </li>
-                        <li>
-                            <div class="post-header">
-                                <div class="post-meta">
-                                    <time class="published" datetime="2020-04-19">April 19, 2020</time>
-                                </div>
-                                <h3 class="post-title"><a href="/unit-testing-in-android-with-spek/">Writing Unit Tests
-                                        efficiently in Android with Spek</a></h3>
-                            </div>
-                            <a href="/unit-testing-in-android-with-spek/" class="post-thumbnail"><img
-                                    class="post-thumbnail-image"
-                                    src="https://s3-us-east-2.amazonaws.com/rivu.dev/2020/04/spek-cover.png"
-                                    alt="Writing Unit Tests efficiently in Android with Spek" /></a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="widget widget-tagcloud">
-                    <h2 class="widget-title small-title">Tags</h2>
-                    <div class="tagcloud">
-                        <a href="/tag/android/">Android</a><a href="/tag/androiddev/">AndroidDev</a><a
-                            href="/tag/kotlin/">Kotlin</a><a href="/tag/jetpack/">jetpack</a><a
-                            href="/tag/functional-programming/">Functional Programming</a><a
-                            href="/tag/optimisation/">optimisation</a><a href="/tag/fp/">FP</a><a
-                            href="/tag/ui/">UI</a><a href="/tag/viewmodel/">ViewModel</a><a
-                            href="/tag/jetpack-compose/">jetpack compose</a><a href="/tag/interview/">Interview</a><a
-                            href="/tag/data-structures/">Data Structures</a><a href="/tag/ds/">DS</a><a
-                            href="/tag/design-patterns/">Design Patterns</a><a
-                            href="/tag/architecture/">Architecture</a><a href="/tag/architect/">Architect</a><a
-                            href="/tag/di/">DI</a><a href="/tag/dependency-injection/">Dependency Injection</a><a
-                            href="/tag/sl/">SL</a><a href="/tag/service-locator/">Service Locator</a><a
-                            href="/tag/dagger/">Dagger</a><a href="/tag/koin/">Koin</a><a
-                            href="/tag/dagger-vs-koin/">Dagger vs Koin</a><a href="/tag/di-vs-sl/">DI vs SL</a><a
-                            href="/tag/ioc/">IoC</a><a href="/tag/inversion-of-control/">Inversion of Control</a><a
-                            href="/tag/livedata/">LiveData</a><a href="/tag/compose/">compose</a><a
-                            href="/tag/dev/">Dev</a><a href="/tag/unit-test/">Unit Test</a><a
-                            href="/tag/test/">Test</a><a href="/tag/dsl/">DSL</a><a href="/tag/spek/">Spek</a><a
-                            href="/tag/immutability/">Immutability</a><a href="/tag/pure-functions/">Pure
-                            Functions</a><a href="/tag/lambda/">Lambda</a><a href="/tag/functions/">Functions</a><a
-                            href="/tag/high-order/">High Order</a><a href="/tag/high-order-functions/">High Order
-                            Functions</a><a href="/tag/getting-started/">Getting Started</a><a
-                            href="/tag/immutable/">immutable</a><a href="/tag/composable/">composable</a><a
-                            href="/tag/rivu-chakraborty/">Rahul Ray</a><a href="/tag/rivu/">Rivu</a><a
-                            href="/tag/public-speaking/">Public Speaking</a><a href="/tag/public-tag/">Public</a><a
-                            href="/tag/speaking/">Speaking</a><a href="/tag/slides/">Slides</a><a
-                            href="/tag/coroutines/">Coroutines</a>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </aside>
 
     <script src="https://www.rivu.dev/assets/js/index.js?v=f93ec3c8a0"></script>
 

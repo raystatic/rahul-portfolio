@@ -1,0 +1,30 @@
+[
+    {
+        "date":"Jun 25, 2023",
+        "title":"ZoomPanView",
+        "description":"ZoomPanView is a custom Android view that allows users to zoom, pan, and rotate images. It provides interactive gestures for manipulating images and supports smooth zooming and panning functionality.        ",
+        "image":"https://user-images.githubusercontent.com/31301266/248566626-84f432d6-a94f-4651-8866-315e968fa44c.mp4",
+        "link":"https://github.com/raystatic/ZoomPanView"
+    },
+    {
+        "date":"Jun 22, 2023",
+        "title":"CleanArch-NewsApp",
+        "description":"News App (inspired from Inshots) which includes - Layered Modularisation, Paging 3, Room, Retrofit, Dagger Hilt",
+        "image":"https://user-images.githubusercontent.com/31301266/122964347-c9e11200-d3a4-11eb-8bd9-c03725709ba8.mp4",
+        "link":"https://github.com/raystatic/CleanArch-NewsApp"
+    },
+    {
+        "date":"Jan 12, 2021",
+        "title":"Biometric-Authentication in Android",
+        "description":"By using biometric login, instead of having to remember an account username and password every time to open your app, users can just use their biometric credentials to confirm their presence and authorize access to the private content.",
+        "image":"https://user-images.githubusercontent.com/31301266/104251068-f3f8e480-5494-11eb-9dfa-caed9d9a7ac7.gif",
+        "link":"https://github.com/raystatic/Biometric-Authentication#here-is-a-demo-of-the-app"
+    },
+    {
+        "date":"Feb 12, 2023",
+        "title":"Checkout more on Github",
+        "description":"Checkout Rahul Ray on Github (raystatic) | Android Developer",
+        "image":"https://vein.gallery/img/github-card.136da79a.jpg",
+        "link":"https://github.com/raystatic"
+    }
+]
