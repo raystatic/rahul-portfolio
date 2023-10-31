@@ -2,13 +2,25 @@ window.onload = async (event) => {
     getArtciles();
     getYoutubeVideos();
     getProjects();
+    getApps();
 }
 
 async function getProjects() {
     fetch('./projects.json')
         .then(response => response.json())
         .then(jsonData => {
-            loadArticles(jsonData, 'projects')
+            loadArticles(jsonData, 'projects', false, '#000000')
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+async function getApps() {
+    fetch('./apps.json')
+        .then(response => response.json())
+        .then(jsonData => {
+            loadArticles(jsonData, 'apps', false)
         })
         .catch(error => {
             console.error('Error:', error);
@@ -19,7 +31,7 @@ async function getYoutubeVideos() {
     fetch('./youtube.json')
         .then(response => response.json())
         .then(jsonData => {
-            loadArticles(jsonData, 'yotube_videos')
+            loadArticles(jsonData, 'yotube_videos', true)
         })
         .catch(error => {
             console.error('Error:', error);
@@ -30,18 +42,25 @@ async function getArtciles() {
     fetch('./articles.json')
         .then(response => response.json())
         .then(jsonData => {
-            loadArticles(jsonData, 'articles')
+            loadArticles(jsonData, 'articles', true)
         })
         .catch(error => {
             console.error('Error:', error);
         });
 }
 
-async function loadArticles(articles, divId) {
+async function loadArticles(articles, divId, shouldChangeImgBgColor, imageBgColor) {
     var articlesHtml = '<div>'
 
     articlesHtml += '<div class="desktop-view">'
     articlesHtml += '<div class="grid-container">'
+
+    let imgBgColor = '#000000';
+    if (imageBgColor === null) {
+        imgBgColor = '#000000'
+    } else {
+        imgBgColor = imageBgColor
+    }
 
     for (let i = 0; i < articles.length; i++) {
         var value = articles[i];
@@ -60,7 +79,7 @@ async function loadArticles(articles, divId) {
                                 class="post-thumbnail-image-desktop"
                                 src="${value.image}"
                                 alt="${value.title}" 
-                                style="display:block; marging:auto;"/>
+                                style="display:block; marging:auto; background-color: ${imageBgColor}"/>
                         </a>
                 
                         <div class="post-content" style="width:100%; padding-left:20px;">
@@ -91,6 +110,7 @@ async function loadArticles(articles, divId) {
                             class="post-thumbnail-image-mobile"
                             src="${value.image}"
                             alt="${value.title}" 
+                            style="background-color: ${imageBgColor}
                             width="100vw"
                             height="100vh"/></a>
                     
@@ -107,7 +127,69 @@ async function loadArticles(articles, divId) {
 
     articlesHtml += '</div></div></div>'
 
-    console.log(articlesHtml);
-
     document.getElementById(divId).innerHTML = articlesHtml;
+
+    if (shouldChangeImgBgColor) {
+        changeBackgroundColorOfImages()
+    }
+}
+
+function changeBackgroundColorOfImages() {
+    const mobileImages = document.querySelectorAll(".post-thumbnail-image-mobile");
+    const desktopImages = document.querySelectorAll(".post-thumbnail-image-desktop");
+
+    mobileImages.forEach(function (image) {
+        image.addEventListener("load", function () {
+            console.log("mobile images")
+            changeBackgroundColor(image);
+        });
+    });
+
+    desktopImages.forEach(function (image) {
+        image.addEventListener("load", function () {
+            changeBackgroundColor(image);
+        });
+    });
+
+}
+
+function changeBackgroundColor(image) {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    // Set the canvas dimensions to match the image
+    canvas.width = image.width;
+    canvas.height = image.height;
+
+    // Draw the image on the canvas
+    ctx.drawImage(image, 0, 0, image.width, image.height);
+
+    // Get the pixel data of the entire image
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+    // Analyze the pixel data to find the primary color
+    const colorCounts = {};
+    let maxCount = 0;
+    let primaryColor = "white"; // Default color if no primary color is found
+
+    for (let i = 0; i < imageData.length; i += 4) {
+        const r = imageData[i];
+        const g = imageData[i + 1];
+        const b = imageData[i + 2];
+        const rgb = `rgb(${r},${g},${b})`;
+
+        if (colorCounts[rgb]) {
+            colorCounts[rgb]++;
+        } else {
+            colorCounts[rgb] = 1;
+        }
+
+        if (colorCounts[rgb] > maxCount) {
+            maxCount = colorCounts[rgb];
+            primaryColor = rgb;
+        }
+    }
+
+    // Change the background color of the parent container
+    image.style.backgroundColor = primaryColor;
 }

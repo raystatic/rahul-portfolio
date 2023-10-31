@@ -1,0 +1,23 @@
+[
+    {
+        "date":"",
+        "title":"MARKS: IIT JEE & NEET Prep App",
+        "description":"MARKS is a free app in which you can download and practice chapter-wise previous year questions of IIT JEE Main, IIT JEE Advanced, NEET, BITSAT, WBJEE, MHT CET, NDA, KVPY and much more.",
+        "image":"./images/apps/marks.png",
+        "link":"https://play.google.com/store/apps/details?id=com.scoremarks.marks&hl=en_IN&gl=US"
+    },
+    {
+        "date":"",
+        "title":"Qupiq - Compare & Delete Dupli",
+        "description":"Qupiq - The best app to easily manage duplicate and similar photos in gallery. Automatically groups similar pics and helps quickly compare them to keep the best and delete the rest",
+        "image":"./images/apps/qupiq.png",
+        "link":"https://play.google.com/store/apps/details?id=com.instapick"
+    },
+    {
+        "date":"",
+        "title":"Play it (Spotify-clone-Android)",
+        "description":"This app, inspired by Spotify, enables offline song playback through Media Player components, Background Services, and Custom notifications.",
+        "image":"https://play-lh.googleusercontent.com/cmVyNd5jGaxBHHVPgAlN_hQ2REO87HnTJCiynD3JKCfVDyWMlNCcSbNlHwCoc-PRsko",
+        "link":"https://play.google.com/store/apps/details?id=com.spotify.playit"
+    }
+]

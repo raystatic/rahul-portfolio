@@ -3,28 +3,28 @@
         "date":"Jul 17, 2023",
         "title":"Understanding Process Death in Android!",
         "description":"In this video, I am going to talk about Process Deaths in Android. In simple terms whenever the Android system kills a process in the background to free up some memory for a new process...",
-        "image":"https://i.ytimg.com/vi/5bPI2lQoeMw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCE5PKGluhMoDfQ8AHZPhA16pwm1w",
+        "image":"./images/youtube/process-death.jpg",
         "link":"https://www.youtube.com/watch?v=5bPI2lQoeMw&t=1s"
     },
     {
         "date":"JULY 05, 2020",
         "title":"Build Layouts with ConstraintLayout in Jetpack Compose - A Hands-on Tutorial",
         "description":"Do you want to learn how to create beautiful and responsive layouts in Jetpack Compose? In this hands-on tutorial, we'll show you how to use ConstraintLayout to build an Instagram post layout from scratch.",
-        "image":"https://i.ytimg.com/vi/wAU55nPDh00/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBMo6EpjB3fLFU7NhediE5U_I2R2A",
+        "image":"./images/youtube/compose-constraint.jpg",
         "link":"https://www.youtube.com/watch?v=wAU55nPDh00&t=1s"
     },
     {
         "date":"Feb 12, 2023",
         "title":"Building Secure APIs with JWT and Token Refresh Mechanism in Android using OkHttp Interceptors",
         "description":"In this video, you will learn how to create secure APIs with JWT tokens and refresh those tokens in Android using OkHttp Interceptors. We will take a hands-on approach to building a sample Android application that communicates with a secure API",
-        "image":"https://i.ytimg.com/vi/zx9GUaKH2Ew/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDZ7nge2kv1qqbknWpKXmDtJFrRhw",
+        "image":"./images/youtube/jwt.jpg",
         "link":"https://www.youtube.com/watch?v=zx9GUaKH2Ew&t=1s"
     },
     {
         "date":"Feb 12, 2023",
         "title":"Watch more on Youtube",
         "description":"Checkout Rahul Ray (raystatic) on Youtube | Android Developer",
-        "image":"https://variety.com/wp-content/uploads/2020/06/youtube-logo.png",
+        "image":"./images/youtube/youtube.png.webp",
         "link":"https://www.youtube.com/@raystatic/videos"
     }
 ]
