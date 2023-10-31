@@ -17,7 +17,7 @@
         "date":"",
         "title":"Play it (Spotify-clone-Android)",
         "description":"This app, inspired by Spotify, enables offline song playback through Media Player components, Background Services, and Custom notifications.",
-        "image":"https://play-lh.googleusercontent.com/cmVyNd5jGaxBHHVPgAlN_hQ2REO87HnTJCiynD3JKCfVDyWMlNCcSbNlHwCoc-PRsko",
+        "image":"./images/apps/playit.png",
         "link":"https://play.google.com/store/apps/details?id=com.spotify.playit"
     }
 ]
