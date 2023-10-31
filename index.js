@@ -101,63 +101,6 @@ async function loadArticles(articles, divId, shouldChangeImgBgColor, imageBgColo
 
     articlesHtml += articleListHtml
 
-    // for (let i = 0; i < articles.length; i++) {
-    //     var value = articles[i];
-    //     // articlesHtml += `
-    //     //     <article
-    //     //         class="post inner">
-
-    //     //         <header class="post-header">
-    //     //             <div class="post-meta">
-    //     //                 <time class="published">${value.date}</time>
-    //     //             </div>
-    //     //             <a href="${value.link}">
-    //     //                 <img
-    //     //                     class="post-thumbnail-image-mobile"
-    //     //                     src="${value.image}"
-    //     //                     alt="${value.title}" 
-    //     //                     style="background-color: ${imageBgColor}
-    //     //                     width="100vw"
-    //     //                     height="100vh"/></a>
-                    
-    //     //         </header>
-                
-    //     //         <div class="post-content">
-    //     //             <h4 class="post-title h6" style="padding-top: 10px;">
-    //     //                 <a href="${value.link}">${value.title}</a></h4>
-    //     //             <p class="post-excerpt post-excerpt-dots" style="overflow:hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2;  -webkit-box-orient: vertical;">${value.description}</p>
-    //     //         </div>    
-    //     //     </article>
-    //     // `
-
-    //     // articlesHtml += `
-    //     //     <article
-    //     //         class="post inner">
-    //     //         <header class="post-header">
-    //     //                 <div class="post-meta">
-    //     //                     <time class="published">${value.date}</time>
-    //     //                 </div>
-    //     //             </header>
-
-    //     //             <div style="display: flex;width:100%">
-    //     //                 <a href="${value.link}">
-    //     //                     <img
-    //     //                         class="post-thumbnail-image-desktop"
-    //     //                         src="${value.image}"
-    //     //                         alt="${value.title}" 
-    //     //                         style="display:block; marging:auto; background-color: ${imageBgColor}"/>
-    //     //                 </a>
-                
-    //     //                 <div class="post-content" style="width:100%; padding-left:20px;">
-    //     //                     <h4 class="post-title h6" style="padding-top: 10px;">
-    //     //                         <a href="${value.link}">${value.title}</a></h4>
-    //     //                     <p class="post-excerpt post-excerpt-dots" style="overflow:hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2;  -webkit-box-orient: vertical;">${value.description}</p>
-    //     //                 </div>
-    //     //             </div>    
-    //     //     </article>
-    //     // `
-    // }
-
     articlesHtml += '</div></div></div>'
 
     document.getElementById(divId).innerHTML = articlesHtml;
