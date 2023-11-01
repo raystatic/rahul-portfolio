@@ -6,7 +6,7 @@
         "tags": [
             "AndroidDev","Android","jetpack","optimisation","Viewmodel"
         ],
-        "image":"./images/articles/pagination.webp",
+        "image":"./images/articles/pagination.png",
         "link":"https://medium.com/proandroiddev/pagination-with-paging-3-modifying-paged-data-223f0bea603b"
     },
     {
@@ -16,14 +16,14 @@
         "tags": [
             "AndroidDev","Android","jetpack","optimisation","Viewmodel"
         ],
-        "image":"./images/articles/sse.webp",
+        "image":"./images/articles/sse.png",
         "link":"https://proandroiddev.com/server-sent-events-in-android-with-node-js-8e7daec45bbd"
     },
     {
         "date":"Feb 12, 2023",
         "title":"Refresh JWT Tokens in Android with OkHttp Interceptor",
         "description":"In this article, we will be discussing the process of refreshing JSON Web Tokens (JWTs) in an Android app using Retrofit. JWTs are widely used for authentication in web and mobile applications. ",
-        "image":"./images/articles/jwt.webp",
+        "image":"./images/articles/jwt.png",
         "link":"https://medium.com/proandroiddev/refresh-jwt-tokens-in-android-with-okhttp-interceptor-575aaa4b6"
     },
     {
