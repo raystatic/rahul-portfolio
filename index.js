@@ -60,11 +60,6 @@ async function loadArticles(articles, divId) {
         articlesHtml += `
             <article
                 class="post inner">
-                <header class="post-header">
-                        <div class="post-meta">
-                            <time class="published">${value.date}</time>
-                        </div>
-                    </header>
 
                     <div style="display: flex;width:100%">
                         <a href="${value.link}">
@@ -93,12 +88,6 @@ async function loadArticles(articles, divId) {
         articlesHtml += `
             <article
                 class="post inner">
-                <header class="post-header">
-                        <div class="post-meta">
-                            <time class="published">${value.date}</time>
-                        </div>
-                    </header>
-
                     <div style="display: flex;width:100%">
                         <a href="${value.link}">
                             <img
