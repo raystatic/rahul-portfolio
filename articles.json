@@ -1,5 +1,16 @@
 [
     {
+        "date":"Feb 19, 2024",
+        "title":"Overlapping Lists — Custom Composable Vs RecyclerView",
+        "description":"User experience plays a very crucial role in letting users interact with your application more which results in greater user retention. Today we are going to discuss about very often used UI design called overlapping list.",
+        "tags": [
+            "AndroidDev","Android","Jetpack Compose",
+            "Kotlin","User Experience"
+        ],
+        "image":"./images/articles/overlapping.png",
+        "link":"https://medium.com/proandroiddev/overlapping-lists-custom-composable-vs-recyclerview-9d0655c5a20e"
+    },
+    {
         "date":"Oct 16, 2023",
         "title":"Pagination with Paging 3: Modifying Paged Data",
         "description":"Pagination plays a crucial role in building industrial applications. We don’t want to load large amounts of data in one go, that’s why we read them in certain pages. Through this, we want to provide infinite scrolling behaviour to our users without hampering their user experience. For Android, Google has…",
